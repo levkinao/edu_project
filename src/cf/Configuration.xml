@@ -275,7 +275,9 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>Администрирование</Subsystem>
+			<Subsystem>Закупки</Subsystem>
 			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
+			<Subsystem>Производство</Subsystem>
 			<Subsystem>СтандартныеПодсистемы</Subsystem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряВоскресеньеЦвет</StyleItem>
@@ -843,6 +845,8 @@
 			<CommonPicture>ЭтапыПодтверждения</CommonPicture>
 			<CommonPicture>ЯндексКарты</CommonPicture>
 			<CommonPicture>УдалитьИнформация</CommonPicture>
+			<CommonPicture>РазделЗакупки</CommonPicture>
+			<CommonPicture>РазделПроизводство16</CommonPicture>
 			<SessionParameter>АвторизованныйПользователь</SessionParameter>
 			<SessionParameter>БуферОбмена</SessionParameter>
 			<SessionParameter>ВерсииШаблоновОграниченияДоступа</SessionParameter>
@@ -2186,6 +2190,11 @@
 			<Catalog>ЭлектронноеПисьмоВходящееПрисоединенныеФайлы</Catalog>
 			<Catalog>ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</Catalog>
 			<Catalog>ЯзыкиПечатныхФорм</Catalog>
+			<Catalog>ВидыНоменклатуры</Catalog>
+			<Catalog>Номенклатура</Catalog>
+			<Catalog>СерииНоменклатуры</Catalog>
+			<Catalog>РесурсныеСпецификации</Catalog>
+			<Catalog>Склады</Catalog>
 			<Document>Анкета</Document>
 			<Document>Встреча</Document>
 			<Document>ЗапланированноеВзаимодействие</Document>
@@ -2280,6 +2289,7 @@
 			<Enum>ФорматыХраненияОдностраничныхФайлов</Enum>
 			<Enum>ЦветаЗаметок</Enum>
 			<Enum>ЦветностиИзображения</Enum>
+			<Enum>ТипыНоменклатуры</Enum>
 			<Report>АнализВерсийОбъектов</Report>
 			<Report>АнализЖурналаРегистрации</Report>
 			<Report>АнализОпроса</Report>

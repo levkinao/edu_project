@@ -6,7 +6,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Администрирование</v8:content>
+					<v8:content>НСИ и администрирование</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -122,6 +122,8 @@
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.РазрешенныеНеаккредитованныеУЦ</xr:Item>
 			</Content>
 		</Properties>
-		<ChildObjects/>
+		<ChildObjects>
+			<Subsystem>НСИ</Subsystem>
+		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>
