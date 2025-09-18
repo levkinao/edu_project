@@ -3,6 +3,10 @@
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<InputField name="Код" id="1">
 			<DataPath>Объект.Code</DataPath>
@@ -24,6 +28,9 @@
 			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 			<ContextMenu name="ВидНоменклатурыКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="ВидНоменклатурыРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ВидНоменклатурыПриИзменении</Event>
+			</Events>
 		</InputField>
 		<InputField name="НормативныйПроцентСухогоВещества" id="10">
 			<DataPath>Объект.НормативныйПроцентСухогоВещества</DataPath>
@@ -40,6 +47,13 @@
 			<ContextMenu name="ТребуетсяПроверкаЛабораториейКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ТребуетсяПроверкаЛабораториейРасширеннаяПодсказка" id="15"/>
 		</CheckBoxField>
+		<InputField name="Описание" id="16">
+			<DataPath>Объект.Описание</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="18"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
