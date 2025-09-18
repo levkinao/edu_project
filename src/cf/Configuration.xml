@@ -2206,6 +2206,7 @@
 			<Document>ЭлектронноеПисьмоВходящее</Document>
 			<Document>ЭлектронноеПисьмоИсходящее</Document>
 			<Document>ПроизводствоБезЗаказа</Document>
+			<Document>ПриобретениеТоваровУслуг</Document>
 			<DocumentJournal>Взаимодействия</DocumentJournal>
 			<DocumentJournal>СогласияНаОбработкуПерсональныхДанных</DocumentJournal>
 			<Enum>ВажностьПроблемыУчета</Enum>
@@ -2551,6 +2552,7 @@
 			<InformationRegister>УдалитьРезультатыОбменаДанными</InformationRegister>
 			<InformationRegister>УдалитьХранимыеФайлыВерсий</InformationRegister>
 			<AccumulationRegister>РасходыСырьяНаПроизводствоКондитерскихИзделий</AccumulationRegister>
+			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<ChartOfCharacteristicTypes>ВопросыДляАнкетирования</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ДополнительныеРеквизитыИСведения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ОбъектыАдресацииЗадач</ChartOfCharacteristicTypes>
