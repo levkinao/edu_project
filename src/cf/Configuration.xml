@@ -275,8 +275,11 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<Subsystem>Администрирование</Subsystem>
+			<Subsystem>Закупки</Subsystem>
 			<Subsystem>ПодключаемыеОтчетыИОбработки</Subsystem>
+			<Subsystem>Производство</Subsystem>
 			<Subsystem>СтандартныеПодсистемы</Subsystem>
+			<Subsystem>ЛИМС</Subsystem>
 			<StyleItem>ВажнаяНадписьШрифт</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряВоскресеньеЦвет</StyleItem>
 			<StyleItem>ВидДняПроизводственногоКалендаряНеУказанЦвет</StyleItem>
@@ -843,6 +846,9 @@
 			<CommonPicture>ЭтапыПодтверждения</CommonPicture>
 			<CommonPicture>ЯндексКарты</CommonPicture>
 			<CommonPicture>УдалитьИнформация</CommonPicture>
+			<CommonPicture>РазделЗакупки</CommonPicture>
+			<CommonPicture>РазделПроизводство16</CommonPicture>
+			<CommonPicture>РазделЛИМС</CommonPicture>
 			<SessionParameter>АвторизованныйПользователь</SessionParameter>
 			<SessionParameter>БуферОбмена</SessionParameter>
 			<SessionParameter>ВерсииШаблоновОграниченияДоступа</SessionParameter>
@@ -1002,6 +1008,10 @@
 			<CommonTemplate>КомпонентаПоискаСтрок</CommonTemplate>
 			<CommonTemplate>ПолучениеДереваОбработчиковОбновления</CommonTemplate>
 			<CommonTemplate>СтруктураПодчиненности</CommonTemplate>
+			<CommonTemplate>librdkafka_win32</CommonTemplate>
+			<CommonTemplate>librdkafka_win64</CommonTemplate>
+			<CommonTemplate>librdkafka_linux32</CommonTemplate>
+			<CommonTemplate>librdkafka_linux64</CommonTemplate>
 			<FilterCriterion>СвязанныеДокументы</FilterCriterion>
 			<FilterCriterion>ФайлыВТоме</FilterCriterion>
 			<CommonModule>GoogleПереводчик</CommonModule>
@@ -1483,6 +1493,12 @@
 			<CommonModule>ЭлектроннаяПодписьСлужебныйПовтИсп</CommonModule>
 			<CommonModule>ЯндексПереводчик</CommonModule>
 			<CommonModule>ОбновлениеИнформационнойБазыМК</CommonModule>
+			<CommonModule>РаботаСКафкаВызовСервера</CommonModule>
+			<CommonModule>РаботаСКафкаКлиент</CommonModule>
+			<CommonModule>РаботаСКафкаСервер</CommonModule>
+			<CommonModule>ОтправкаПолучениеСообщенийКафка</CommonModule>
+			<CommonModule>СообщенияКафка</CommonModule>
+			<CommonModule>УправлениеОбменомПовтИсп</CommonModule>
 			<CommonAttribute>КомментарийЯзык1</CommonAttribute>
 			<CommonAttribute>КомментарийЯзык2</CommonAttribute>
 			<CommonAttribute>НаименованиеЯзык1</CommonAttribute>
@@ -1629,6 +1645,8 @@
 			<EventSubscription>УстановитьПометкуУдаленияПрисоединенныхФайловДокументовВзаимодействия</EventSubscription>
 			<EventSubscription>УстановитьСнятьПометкуУдаленияЗаметок</EventSubscription>
 			<EventSubscription>УстановитьСтатусИзмененияПометкиУдаленияПользователя</EventSubscription>
+			<EventSubscription>ЗарегистрироватьИзмененияВИсходящихСообщенияхKafka</EventSubscription>
+			<EventSubscription>лимсЗарегистрироватьИзмененияВИсходящихСообщенияхKafka</EventSubscription>
 			<ScheduledJob>ЗагрузкаКурсовВалют</ScheduledJob>
 			<ScheduledJob>ЗаполнениеДанныхДляОграниченияДоступа</ScheduledJob>
 			<ScheduledJob>ЗаполнениеПараметровРаботыРасширений</ScheduledJob>
@@ -1671,6 +1689,10 @@
 			<ScheduledJob>УдалениеУстаревшихПараметровРаботыВерсийРасширений</ScheduledJob>
 			<ScheduledJob>УстановкаПериодаРассчитанныхИтогов</ScheduledJob>
 			<ScheduledJob>ЭкспортОценкиПроизводительности</ScheduledJob>
+			<ScheduledJob>ОтправитьСообщенияВЛИМС</ScheduledJob>
+			<ScheduledJob>лимсПолучитьСообщенияИзЕРП</ScheduledJob>
+			<ScheduledJob>лимсОтправитьСообщенияВЕРП</ScheduledJob>
+			<ScheduledJob>ПолучитьСообщенияИзЛИМС</ScheduledJob>
 			<SettingsStorage>ХранилищеВариантовОтчетов</SettingsStorage>
 			<FunctionalOption>АктуальнаяДатаОбновленияПовторноИспользуемыхЗначенийМРО</FunctionalOption>
 			<FunctionalOption>ВариантыВерсионированияОбъектов</FunctionalOption>
@@ -2186,6 +2208,16 @@
 			<Catalog>ЭлектронноеПисьмоВходящееПрисоединенныеФайлы</Catalog>
 			<Catalog>ЭлектронноеПисьмоИсходящееПрисоединенныеФайлы</Catalog>
 			<Catalog>ЯзыкиПечатныхФорм</Catalog>
+			<Catalog>ВидыНоменклатуры</Catalog>
+			<Catalog>Номенклатура</Catalog>
+			<Catalog>СерииНоменклатуры</Catalog>
+			<Catalog>РесурсныеСпецификации</Catalog>
+			<Catalog>Склады</Catalog>
+			<Catalog>МаршрутыКафка</Catalog>
+			<Catalog>ПараметрыПодключенияКафка</Catalog>
+			<Catalog>ИсходящиеСообщенияKafka</Catalog>
+			<Catalog>лимсМаршрутыКафка</Catalog>
+			<Catalog>лимсИсходящиеСообщенияKafka</Catalog>
 			<Document>Анкета</Document>
 			<Document>Встреча</Document>
 			<Document>ЗапланированноеВзаимодействие</Document>
@@ -2196,6 +2228,11 @@
 			<Document>ТелефонныйЗвонок</Document>
 			<Document>ЭлектронноеПисьмоВходящее</Document>
 			<Document>ЭлектронноеПисьмоИсходящее</Document>
+			<Document>ПроизводствоБезЗаказа</Document>
+			<Document>ПриобретениеТоваровУслуг</Document>
+			<Document>лимсПриобретениеТоваровУслуг</Document>
+			<Document>лимсЛабораторноеИсследование</Document>
+			<Document>ЛабораторноеИсследование</Document>
 			<DocumentJournal>Взаимодействия</DocumentJournal>
 			<DocumentJournal>СогласияНаОбработкуПерсональныхДанных</DocumentJournal>
 			<Enum>ВажностьПроблемыУчета</Enum>
@@ -2280,6 +2317,7 @@
 			<Enum>ФорматыХраненияОдностраничныхФайлов</Enum>
 			<Enum>ЦветаЗаметок</Enum>
 			<Enum>ЦветностиИзображения</Enum>
+			<Enum>ТипыНоменклатуры</Enum>
 			<Report>АнализВерсийОбъектов</Report>
 			<Report>АнализЖурналаРегистрации</Report>
 			<Report>АнализОпроса</Report>
@@ -2310,6 +2348,7 @@
 			<Report>СогласияНаОбработкуПерсональныхДанныхИстекающие</Report>
 			<Report>СостояниеУчетнойЗаписиDSS</Report>
 			<Report>УниверсальныйОтчет</Report>
+			<Report>ОтчетПоКонтролюСырья</Report>
 			<DataProcessor>АвтоматическоеИзвлечениеТекстов</DataProcessor>
 			<DataProcessor>АктивныеПользователи</DataProcessor>
 			<DataProcessor>БлокировкаРаботыПользователей</DataProcessor>
@@ -2539,6 +2578,13 @@
 			<InformationRegister>УдалитьОбластиПерсональныхДанных</InformationRegister>
 			<InformationRegister>УдалитьРезультатыОбменаДанными</InformationRegister>
 			<InformationRegister>УдалитьХранимыеФайлыВерсий</InformationRegister>
+			<InformationRegister>ПравилаРегистрацииКафка</InformationRegister>
+			<InformationRegister>ИсходящиеСообщенияКафкаКОтправке</InformationRegister>
+			<InformationRegister>лимсПравилаРегистрацииКафка</InformationRegister>
+			<InformationRegister>лимсИсходящиеСообщенияКафкаКОтправке</InformationRegister>
+			<InformationRegister>ЗначенияПроцентаСухихВеществ</InformationRegister>
+			<AccumulationRegister>РасходыСырьяНаПроизводствоКондитерскихИзделий</AccumulationRegister>
+			<AccumulationRegister>ТоварыНаСкладах</AccumulationRegister>
 			<ChartOfCharacteristicTypes>ВопросыДляАнкетирования</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ДополнительныеРеквизитыИСведения</ChartOfCharacteristicTypes>
 			<ChartOfCharacteristicTypes>ОбъектыАдресацииЗадач</ChartOfCharacteristicTypes>

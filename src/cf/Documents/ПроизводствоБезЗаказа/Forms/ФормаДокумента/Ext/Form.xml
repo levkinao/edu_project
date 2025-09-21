@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомерДата" id="65">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="66"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>от</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Склад" id="7">
+			<DataPath>Объект.Склад</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СкладКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ВыходноеИзделие" id="10">
+			<DataPath>Объект.ВыходноеИзделие</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВыходноеИзделиеКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВыходноеИзделиеРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ВыходноеИзделиеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="РесурснаяСпецификация" id="13">
+			<DataPath>Объект.РесурснаяСпецификация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="РесурснаяСпецификацияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="РесурснаяСпецификацияРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">РесурснаяСпецификацияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<UsualGroup name="ГруппаПланФакт" id="67">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа план факт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа план факт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ThroughAlign>Use</ThroughAlign>
+			<ExtendedTooltip name="ГруппаПланФактРасширеннаяПодсказка" id="68"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПлан" id="69">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа план</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаПланРасширеннаяПодсказка" id="70"/>
+					<ChildItems>
+						<InputField name="КоличествоПлан" id="16">
+							<DataPath>Объект.КоличествоПлан</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КоличествоПланКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="КоличествоПланРасширеннаяПодсказка" id="18"/>
+							<Events>
+								<Event name="OnChange">КоличествоПланПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПроцентСухогоВеществаПлан" id="22">
+							<DataPath>Объект.ПроцентСухогоВеществаПлан</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>% сухого вещества</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПроцентСухогоВеществаПланКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="ПроцентСухогоВеществаПланРасширеннаяПодсказка" id="24"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаФакт" id="71">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Факт</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа факт</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ThroughAlign>Use</ThroughAlign>
+					<ExtendedTooltip name="ГруппаФактРасширеннаяПодсказка" id="72"/>
+					<ChildItems>
+						<InputField name="КоличествоФакт" id="19">
+							<DataPath>Объект.КоличествоФакт</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Количество</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="КоличествоФактКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="КоличествоФактРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ПроцентСухогоВеществаФакт" id="25">
+							<DataPath>Объект.ПроцентСухогоВеществаФакт</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>% сухого вещества</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПроцентСухогоВеществаФактКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ПроцентСухогоВеществаФактРасширеннаяПодсказка" id="27"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="74"/>
+			<ChildItems>
+				<Page name="СтраницаМатериалыИРаботы" id="75">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Материалы и работы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница материалы и работы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаМатериалыИРаботыРасширеннаяПодсказка" id="76"/>
+					<ChildItems>
+						<Table name="МатериалыИРаботы" id="31">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.МатериалыИРаботы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="МатериалыИРаботыКонтекстноеМеню" id="32"/>
+							<AutoCommandBar name="МатериалыИРаботыКоманднаяПанель" id="33">
+								<ChildItems>
+									<Button name="МатериалыИРаботыЗаполнитьПоСпецификации" id="81">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьПоСпецификации</CommandName>
+										<ExtendedTooltip name="МатериалыИРаботыЗаполнитьПоСпецификацииРасширеннаяПодсказка" id="82"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="МатериалыИРаботыРасширеннаяПодсказка" id="34"/>
+							<SearchStringAddition name="МатериалыИРаботыСтрокаПоиска" id="35">
+								<AdditionSource>
+									<Item>МатериалыИРаботы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МатериалыИРаботыСтрокаПоискаКонтекстноеМеню" id="36"/>
+								<ExtendedTooltip name="МатериалыИРаботыСтрокаПоискаРасширеннаяПодсказка" id="37"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МатериалыИРаботыСостояниеПросмотра" id="38">
+								<AdditionSource>
+									<Item>МатериалыИРаботы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МатериалыИРаботыСостояниеПросмотраКонтекстноеМеню" id="39"/>
+								<ExtendedTooltip name="МатериалыИРаботыСостояниеПросмотраРасширеннаяПодсказка" id="40"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МатериалыИРаботыУправлениеПоиском" id="41">
+								<AdditionSource>
+									<Item>МатериалыИРаботы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МатериалыИРаботыУправлениеПоискомКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="МатериалыИРаботыУправлениеПоискомРасширеннаяПодсказка" id="43"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="МатериалыИРаботыНомерСтроки" id="44">
+									<DataPath>Объект.МатериалыИРаботы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МатериалыИРаботыНомерСтрокиКонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="МатериалыИРаботыНомерСтрокиРасширеннаяПодсказка" id="46"/>
+								</LabelField>
+								<InputField name="МатериалыИРаботыНоменклатура" id="47">
+									<DataPath>Объект.МатериалыИРаботы.Номенклатура</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="МатериалыИРаботыНоменклатураКонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="МатериалыИРаботыНоменклатураРасширеннаяПодсказка" id="49"/>
+									<Events>
+										<Event name="OnChange">МатериалыИРаботыНоменклатураПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="МатериалыИРаботыСерия" id="50">
+									<DataPath>Объект.МатериалыИРаботы.Серия</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="МатериалыИРаботыСерияКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="МатериалыИРаботыСерияРасширеннаяПодсказка" id="52"/>
+									<Events>
+										<Event name="OnChange">МатериалыИРаботыСерияПриИзменении</Event>
+									</Events>
+								</InputField>
+								<ColumnGroup name="МатериалыИРаботыГруппаПлан" id="77">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>План</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Материалы и работы группа план</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="МатериалыИРаботыГруппаПланРасширеннаяПодсказка" id="78"/>
+									<ChildItems>
+										<InputField name="МатериалыИРаботыКоличествоПлан" id="53">
+											<DataPath>Объект.МатериалыИРаботы.КоличествоПлан</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="МатериалыИРаботыКоличествоПланКонтекстноеМеню" id="54"/>
+											<ExtendedTooltip name="МатериалыИРаботыКоличествоПланРасширеннаяПодсказка" id="55"/>
+											<Events>
+												<Event name="OnChange">МатериалыИРаботыКоличествоПланПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="МатериалыИРаботыПроцентСухогоВеществаПлан" id="59">
+											<DataPath>Объект.МатериалыИРаботы.ПроцентСухогоВеществаПлан</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>% сухого вещества</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="МатериалыИРаботыПроцентСухогоВеществаПланКонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="МатериалыИРаботыПроцентСухогоВеществаПланРасширеннаяПодсказка" id="61"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="МатериалыИРаботыГруппаФакт" id="79">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Факт</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Материалы и работы группа факт</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="МатериалыИРаботыГруппаФактРасширеннаяПодсказка" id="80"/>
+									<ChildItems>
+										<InputField name="МатериалыИРаботыКоличествоФакт" id="56">
+											<DataPath>Объект.МатериалыИРаботы.КоличествоФакт</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="МатериалыИРаботыКоличествоФактКонтекстноеМеню" id="57"/>
+											<ExtendedTooltip name="МатериалыИРаботыКоличествоФактРасширеннаяПодсказка" id="58"/>
+										</InputField>
+										<InputField name="МатериалыИРаботыПроцентСухогоВеществаФакт" id="62">
+											<DataPath>Объект.МатериалыИРаботы.ПроцентСухогоВеществаФакт</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>% сухого вещества</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="МатериалыИРаботыПроцентСухогоВеществаФактКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="МатериалыИРаботыПроцентСухогоВеществаФактРасширеннаяПодсказка" id="64"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Комментарий" id="28">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>2</Height>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="30"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПроизводствоБезЗаказа</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.МатериалыИРаботы">
+					<Column name="ТипНоменклатуры" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Тип номенклатуры</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>cfg:EnumRef.ТипыНоменклатуры</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоСпецификации" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по спецификации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по спецификации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоСпецификации</Action>
+		</Command>
+	</Commands>
+</Form>
