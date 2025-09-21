@@ -3,6 +3,7 @@
 	<SubsystemsOrder>
 		<Subsystem>Subsystem.Закупки</Subsystem>
 		<Subsystem>Subsystem.Производство</Subsystem>
+		<Subsystem>Subsystem.ЛИМС</Subsystem>
 		<Subsystem>Subsystem.Администрирование</Subsystem>
 	</SubsystemsOrder>
 </CommandInterface>

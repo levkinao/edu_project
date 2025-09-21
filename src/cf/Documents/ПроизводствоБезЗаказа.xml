@@ -61,6 +61,7 @@
 			<RegisterRecordsWritingOnPost>WriteSelected</RegisterRecordsWritingOnPost>
 			<SequenceFilling>AutoFill</SequenceFilling>
 			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ЗначенияПроцентаСухихВеществ</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.РасходыСырьяНаПроизводствоКондитерскихИзделий</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ТоварыНаСкладах</xr:Item>
 			</RegisterRecords>
@@ -570,8 +571,17 @@
 									<xr:DataPath xsi:type="xs:string">Document.ПроизводствоБезЗаказа.TabularSection.МатериалыИРаботы.Attribute.Номенклатура</xr:DataPath>
 									<xr:ValueChange>Clear</xr:ValueChange>
 								</xr:Link>
+								<xr:Link>
+									<xr:Name>Склад</xr:Name>
+									<xr:DataPath xsi:type="xs:string">Document.ПроизводствоБезЗаказа.Attribute.Склад</xr:DataPath>
+									<xr:ValueChange>Clear</xr:ValueChange>
+								</xr:Link>
 							</ChoiceParameterLinks>
-							<ChoiceParameters/>
+							<ChoiceParameters>
+								<app:item name="ПоОстаткам">
+									<app:value xsi:type="xs:boolean">true</app:value>
+								</app:item>
+							</ChoiceParameters>
 							<QuickChoice>Auto</QuickChoice>
 							<CreateOnInput>Auto</CreateOnInput>
 							<ChoiceForm/>

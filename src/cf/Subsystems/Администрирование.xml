@@ -124,6 +124,7 @@
 		</Properties>
 		<ChildObjects>
 			<Subsystem>НСИ</Subsystem>
+			<Subsystem>УправлениеОбменом</Subsystem>
 		</ChildObjects>
 	</Subsystem>
 </MetaDataObject>

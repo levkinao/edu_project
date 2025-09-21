@@ -131,6 +131,7 @@
 				</Properties>
 			</Attribute>
 			<Form>ФормаВыбора</Form>
+			<Form>ФормаВыбораПоОстаткам</Form>
 		</ChildObjects>
 	</Catalog>
 </MetaDataObject>

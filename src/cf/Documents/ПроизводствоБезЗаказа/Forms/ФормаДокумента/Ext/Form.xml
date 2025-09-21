@@ -287,6 +287,9 @@
 									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
 									<ContextMenu name="МатериалыИРаботыСерияКонтекстноеМеню" id="51"/>
 									<ExtendedTooltip name="МатериалыИРаботыСерияРасширеннаяПодсказка" id="52"/>
+									<Events>
+										<Event name="OnChange">МатериалыИРаботыСерияПриИзменении</Event>
+									</Events>
 								</InputField>
 								<ColumnGroup name="МатериалыИРаботыГруппаПлан" id="77">
 									<Title>
